@@ -37,34 +37,10 @@ const config: HardhatUserConfig = {
 		hardhat: {
 			allowUnlimitedContractSize: true,
 		},
-		holesky: {
-			url: `https://testnet.node.gincoapis.com/ethereum/holesky/v1/${GINCO_API_KEY}`,
+		mekong: {
+			url: `https://rpc.mekong.ethpandaops.io`,
 			accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
 		},
-		oasysTestnet: {
-			url: `https://testnet.node.gincoapis.com/oasys/testnet/v1/${GINCO_API_KEY}`,
-			accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
-		},
-		bnbTestnet: {
-			url: `https://testnet.node.gincoapis.com/bnb/testnet/v1/${GINCO_API_KEY}`,
-			accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
-		},
-		amoy: {
-			url: `https://testnet.node.gincoapis.com/polygon/amoy-erigon/v1/${GINCO_API_KEY}`,
-			accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
-		},
-		arbitrumSepolia: {
-			url: `https://testnet.node.gincoapis.com/arbitrum/testnet/v1/${GINCO_API_KEY}`,
-			accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
-		},
-		shibuya: {
-			url: `https://testnet.node.gincoapis.com/astar/testnet/v1/${GINCO_API_KEY}`,
-			accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
-		},
-		fuji: {
-			url: `https://testnet.node.gincoapis.com/avax/testnet/v1/${GINCO_API_KEY}`,
-			accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
-		}
 	},
 };
 

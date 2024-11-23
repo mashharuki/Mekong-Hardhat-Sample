@@ -1,6 +1,7 @@
 import { task } from "hardhat/config";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { getContractAddress } from "../../helpers/contractJsonHelper";
+import { mekongTestnet } from "../../helpers/constants";
 
 /**
  * 【Task】	get deployed contract address
@@ -12,7 +13,9 @@ task("getContractAddress", "getContractAddress of connected chain")
 			"################################### [START] ###################################"
 		);
 
-		const publicClient = await hre.viem.getPublicClient();
+		const publicClient = await hre.viem.getPublicClient({
+			chain: mekongTestnet,
+		});
 		const chainId = (await publicClient.getChainId()).toString();
 		// get contract name
 		const contractName = `${taskArgs.contract}Module#${taskArgs.contract}`;
@@ -21,8 +24,8 @@ task("getContractAddress", "getContractAddress of connected chain")
 		const contractAddress = getContractAddress(chainId, contractName);
 
 		console.log(`
-      ${contractName} 's address is ${contractAddress}
-    `);
+			${contractName} 's address is ${contractAddress}
+		`);
 
 		console.log(
 			"################################### [END] ###################################"

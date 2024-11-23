@@ -1,6 +1,6 @@
-# Ginco-One-Platform-Sample
+# Mekong Hardhat Sample
 
-This is a repo for Ginco-One-Platform-Sample.
+This is a repo for Mekong Hardhat Sample.
 
 [![Build and Test SmartContract on GitHub Actions](https://github.com/mashharuki/Ginco-One-Platform-Sample/actions/workflows/ci.yml/badge.svg)](https://github.com/mashharuki/Ginco-One-Platform-Sample/actions/workflows/ci.yml)
 
@@ -8,20 +8,13 @@ This is a repo for Ginco-One-Platform-Sample.
 
 - ### **setUp**
 
-  1.  You need to create Ginco API Key.
-
-      [Ginco One Platform Site](https://console.cloud.ginco.com/nodes/api)
-
-      ![](./docs/api.png)
-
-  2.  You need to create `.env` file & fillout these values
+  1.  You need to create `.env` file & fillout these values
 
       ```txt
       PRIVATE_KEY=""
-      GINCO_API_KEY=""
       ```
 
-  3.  install
+  2.  install
 
       ```bash
       yarn
@@ -44,31 +37,31 @@ This is a repo for Ginco-One-Platform-Sample.
   - **deploy contract**
 
     ```bash
-    yarn deploy:Lock --network holesky
+    yarn deploy:Lock --network mekong
     ```
 
   - **get chain info**
 
     ```bash
-    yarn getChainInfo --network holesky
+    yarn getChainInfo --network mekong
     ```
 
   - **get balance**
 
     ```bash
-    yarn getBalance --network holesky
+    yarn getBalance --network mekong
     ```
 
   - **callReadMethod**
 
     ```bash
-    yarn callReadMethod --network holesky
+    yarn callReadMethod --network mekong
     ```
 
   - **calWriteMethod**
 
     ```bash
-    yarn callWriteMethod --network holesky
+    yarn callWriteMethod --network mekong
     ```
 
 ### 参考文献

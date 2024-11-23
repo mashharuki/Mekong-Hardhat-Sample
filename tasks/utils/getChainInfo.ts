@@ -1,6 +1,7 @@
 import { task } from "hardhat/config";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { formatEther } from "viem";
+import { mekongTestnet } from "../../helpers/constants";
 
 /**
  * 【Task】	getChainInfo of connected chain
@@ -11,7 +12,9 @@ task("getChainInfo", "getChainInfo of connected chain").setAction(
 			"################################### [START] ###################################"
 		);
 
-		const publicClient = await hre.viem.getPublicClient();
+		const publicClient = await hre.viem.getPublicClient({
+			chain: mekongTestnet,
+		});
 		const chainId = await publicClient.getChainId();
 		const blockNumber = await publicClient.getBlockNumber();
 		const count = await publicClient.getBlockTransactionCount();
