@@ -63,7 +63,3 @@ This is a repo for Mekong Hardhat Sample.
     ```bash
     yarn callWriteMethod --network mekong
     ```
-
-### 参考文献
-
-1. [Ginco One Platform Site](https://console.cloud.ginco.com/nodes/api)
